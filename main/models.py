@@ -157,7 +157,7 @@ class GalaryModel(models.Model):  # DONE 100%
     photo = models.ImageField('Jadvalning rasmi ', upload_to="Gallereya", validators=[galary_photo_dimensions])
     main_title = models.CharField('Jadvalning nomi ', blank=False, max_length=32)
     title = models.CharField("Jadvaldagi ma'lumot ", max_length=32, null=True, blank=True)
-    message = models.TextField('Jadvaldagi habar ', blank=True, null=True)
+    message = models.TextField('Jadvaldagi habari ', blank=True, null=True)
     created_at = models.DateTimeField('Kiritilgan vaqti', auto_now_add=True, null=True)
     updated_at = models.DateTimeField("O'zgartirilgan vaqti", auto_now=True, null=True)
 
@@ -173,8 +173,8 @@ class GalaryModel(models.Model):  # DONE 100%
         return self.main_title
 
     class Meta:
-        verbose_name = "Surat"
-        verbose_name_plural = "Suratlar"
+        verbose_name = "Gallereya"
+        verbose_name_plural = "Gallereya"
 
 
 class ContactModel(MakeSingleModel):  # DONE! 100%
