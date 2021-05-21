@@ -13,12 +13,13 @@ SECRET_KEY = 'gsgmk;sgmslfmleffakfaldmdm)gdmqwertyuiokmnbgfcjkms$$$rkka%%$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
 INSTALLED_APPS = [
     'main',
+    "django_cleanup.apps.CleanupConfig",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

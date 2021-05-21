@@ -15,14 +15,15 @@ def checker_of_phone_number(phone_number):
 
 
 class InputForm(ModelForm):  # We could use Form too but for now I am learning ModelForm which is connected to models.py
-    message = forms.CharField(widget=forms.Textarea(attrs={"placeholder": "Xabaringizni kiriting", "value": "mfag"}),
+    message = forms.CharField(widget=forms.Textarea(attrs={"placeholder": "Xabaringizni kiriting"}),
                               max_length=1500, required=True)
     name = forms.CharField(
         widget=forms.TextInput(attrs={"placeholder": "Ismingizni kiriting", "style": "color: black"}),
         max_length=13, required=True)
 
-    phone_number = forms.CharField(widget=forms.TextInput(attrs={"placeholder": "Telefon raqamingizni kiriting"}),
-                                   max_length=13, required=True, validators=[checker_of_phone_number])
+    phone_number = forms.CharField(
+        widget=forms.TextInput(attrs={"placeholder": "Telefon raqamingizni kiriting (+998555555555)"}),
+        max_length=13, required=True, validators=[checker_of_phone_number])
 
     phone_number.label = "Telefon raqamingiz"
     name.label = "Ismingiz"
