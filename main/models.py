@@ -77,7 +77,7 @@ class AboutChildrenModel(models.Model):  # DONE!
 
     updated_at = models.DateTimeField("O'zgartirilgan vaqti", auto_now=True, null=True)
 
-    def __str__(self):
+    def __str__(self): 
         return ""
 
     class Meta:

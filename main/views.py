@@ -88,7 +88,7 @@ def contact(request):  # SECTION --> CONTACT
             error_response = f"?Error={'PhoneInvalid' if bool(Forum['phone_number'].errors) is True else 'Invalid'}"
             return HttpResponseRedirect(error_response)
 
-    elif request.GET.get("submitted") == "True":
+    elif request.GET.get("submitted") == "True":  # is same as some kind of dict like GetMethod["submitted"] == "True"
         Submit = True
 
     elif request.GET.get("Error") == "PhoneInvalid":
