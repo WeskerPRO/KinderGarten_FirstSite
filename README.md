@@ -2,6 +2,8 @@
 
 A simple web application built with **Django** for managing basic kindergarten operations. Currently in early development (v0.1).
 
+> 🇺🇿 **Note:** This project is written in the **Uzbek language** by default. All UI text, admin panel labels, form fields, and error messages are in Uzbek. If you want to use this project in another language, you are free to replace the Uzbek text with your own language in the templates and models.
+
 ---
 
 ## 📋 Table of Contents
@@ -14,6 +16,7 @@ A simple web application built with **Django** for managing basic kindergarten o
   - [Installation](#installation)
   - [Running the App](#running-the-app)
 - [Project Structure](#project-structure)
+- [Localization](#localization)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [License](#license)
@@ -44,13 +47,13 @@ The **Kindergarten Management System** is a Django-based web app for handling ba
 
 ## 🛠️ Tech Stack
 
-| Layer      | Technology            |
-|------------|-----------------------|
-| Backend    | Python 3.12, Django   |
-| Frontend   | HTML, CSS, JavaScript, Bootstrap |
-| Database   | SQLite (default)      |
-| Auth       | Django Auth System    |
-| Images     | Pillow                |
+| Layer      | Technology                        |
+|------------|-----------------------------------|
+| Backend    | Python 3.12, Django               |
+| Frontend   | HTML, CSS, JavaScript, Bootstrap  |
+| Database   | SQLite (default)                  |
+| Auth       | Django Auth System                |
+| Images     | Pillow                            |
 
 ---
 
@@ -145,6 +148,31 @@ KinderGarten_FirstSite/
 
 ---
 
+## 🌐 Localization
+
+This project is fully written in **Uzbek** by default. This includes:
+
+- All HTML template text
+- Admin panel field names and help texts
+- Form labels and error messages
+- Model verbose names
+
+**Want to use a different language?** You can easily change it:
+
+- **Templates** — find Uzbek text in `/templates/*.html` and replace with your language
+- **Models** — field labels like `'Ismi '` (name) or `'Vazifasi '` (position) are in `main/models.py`
+- **Forms** — form labels and error messages are in `main/forms.py`
+- **Settings** — to change the default language, update `LANGUAGE_CODE` in `settings.py`:
+
+```python
+# settings.py
+LANGUAGE_CODE = 'en-us'  # change from 'uz' to your language code
+```
+
+No other configuration is required — just replace the text and you're good to go!
+
+---
+
 ## 🗺️ Roadmap
 
 This project is actively being developed. Planned features for future versions:
@@ -153,6 +181,8 @@ This project is actively being developed. Planned features for future versions:
 - [ ] 📅 Attendance tracking
 - [ ] 👶 Child/student profile management
 - [ ] 📊 Reporting & statistics
+- [ ] 🤖 AI bot for answering parent questions
+- [ ] 📱 Flutter mobile app for parents
 
 ---
 
