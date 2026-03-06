@@ -50,11 +50,11 @@
         <ul class="nav nav-pills">
             <li class="nav-item">
                 <a class="nav-link {% if request.path == '/' %}active{% endif %}" 
-                href="{% if request.path == '/staff/' %}#about{% else %}{% url 'about' %}{% endif %}">Bosh sahifa</a>
+                href="{% if request.path == '/' %}#about{% else %}{% url 'about' %}{% endif %}">Bosh sahifa</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {% if request.path == '/staff/' %}active{% endif %}" 
-                href="{% if request.path == '/news/' %}#team{% else %}{% url 'staff' %}{% endif %}">Hodimlar</a>
+                href="{% if request.path == '/staff/' %}#team{% else %}{% url 'staff' %}{% endif %}">Hodimlar</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {% if request.path == '/news/' %}active{% endif %}" 
